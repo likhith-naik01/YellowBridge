@@ -1,0 +1,22 @@
+.balanceContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #333333;
+  background-color: #1a1a1a;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.balanceAmount {
+  font-weight: 400;
+}
+
+.balanceSymbol {
+  font-weight: 400;
+  color: #888888;
+}
+
+

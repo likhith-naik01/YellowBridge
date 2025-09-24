@@ -1,0 +1,376 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #1a1a1a;
+  border-radius: 12px;
+  border: 1px solid #333333;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.container h2 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.createButton {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  color: #0a0a0a;
+  border: 2px solid #333333;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.createButton:hover:not(:disabled) {
+  background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+  border-color: #555555;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.createButton:disabled {
+  background: #333333;
+  color: #888888;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.createForm {
+  background: #222222;
+  border: 2px solid #333333;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.createForm h4 {
+  margin: 0 0 20px 0;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroup label {
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.inputGroup input,
+.inputGroup select {
+  padding: 14px 16px;
+  border: 2px solid #333333;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #1a1a1a;
+  color: #ffffff;
+  transition: all 0.2s;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: #555555;
+  box-shadow: 0 0 0 3px rgba(85, 85, 85, 0.1);
+}
+
+.inputGroup input::placeholder {
+  color: #888888;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.cancelButton {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #555555;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancelButton:hover {
+  background: #222222;
+  border-color: #777777;
+  transform: translateY(-1px);
+}
+
+.confirmButton {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  color: #0a0a0a;
+  border: 2px solid #333333;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.confirmButton:hover:not(:disabled) {
+  background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+  border-color: #555555;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.confirmButton:disabled {
+  background: #333333;
+  color: #888888;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.channelsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px 20px;
+  color: #888888;
+}
+
+.emptyState h3 {
+  color: #888888;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+
+.emptyState p {
+  color: #666666;
+  font-size: 1rem;
+  margin: 8px 0;
+}
+
+.channelCard {
+  background: #222222;
+  border: 2px solid #333333;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.2s;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.channelCard:hover {
+  border-color: #555555;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.channelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.channelInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.channelId {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  color: #cccccc;
+  background: #1a1a1a;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #333333;
+  font-weight: 400;
+}
+
+.status {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.status.opening {
+  background: #2a2a1a;
+  color: #ffcc00;
+  border: 1px solid #ffcc00;
+}
+
+.status.open {
+  background: #1a2a1a;
+  color: #00ff88;
+  border: 1px solid #00ff88;
+}
+
+.status.resizing {
+  background: #2a1a2a;
+  color: #ff88ff;
+  border: 1px solid #ff88ff;
+}
+
+.status.closing {
+  background: #2a1a1a;
+  color: #ff8800;
+  border: 1px solid #ff8800;
+}
+
+.status.closed {
+  background: #1a1a1a;
+  color: #888888;
+  border: 1px solid #888888;
+}
+
+.status.error {
+  background: #2a1a1a;
+  color: #ff4444;
+  border: 1px solid #ff4444;
+}
+
+.amount {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.channelDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.detailRow span:first-child {
+  color: #888888;
+  font-weight: 400;
+}
+
+.detailRow span:last-child {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.channelActions {
+  display: flex;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #333333;
+}
+
+.actionButton {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  color: #0a0a0a;
+  border: 2px solid #333333;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.actionButton:hover:not(:disabled) {
+  background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+  border-color: #555555;
+  transform: translateY(-1px);
+}
+
+.actionButton:disabled {
+  background: #333333;
+  color: #888888;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.closeButton {
+  background: linear-gradient(135deg, #ff4444, #cc3333);
+  color: #ffffff;
+  border: 2px solid #ff4444;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.closeButton:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ff3333, #bb2222);
+  border-color: #ff3333;
+  transform: translateY(-1px);
+}
+
+.closeButton:disabled {
+  background: #333333;
+  color: #888888;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error {
+  background: #2a1a1a;
+  border: 2px solid #444444;
+  color: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.error p {
+  margin: 0;
+  font-weight: 500;
+  color: #ffffff;
+}
