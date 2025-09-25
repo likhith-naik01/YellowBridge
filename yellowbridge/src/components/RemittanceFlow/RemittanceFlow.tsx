@@ -158,7 +158,10 @@ export function RemittanceFlow({ senderAddress, sessionKey, isAuthenticated, onC
 
       {step === 'quote' && quote && (
         <div className={styles.step}>
-          <h3>Review Transfer</h3>
+          <h3>🟡 Review Your Transfer</h3>
+          <p style={{ color: '#cccccc', textAlign: 'center', marginBottom: '20px' }}>
+            Powered by Yellow Network + Nitrolite ERC-7824
+          </p>
           <div className={styles.quoteCard}>
             <div className={styles.quoteRow}>
               <span>You send:</span>
@@ -175,21 +178,24 @@ export function RemittanceFlow({ senderAddress, sessionKey, isAuthenticated, onC
             <div className={styles.fees}>
               <h4>Fees Breakdown</h4>
               <div className={styles.quoteRow}>
-                <span>Platform fee (2%):</span>
+                <span>Platform fee (0.1%):</span>
                 <span>${quote.fees.platform}</span>
               </div>
               <div className={styles.quoteRow}>
                 <span>Network fee:</span>
-                <span>${quote.fees.network}</span>
+                <span>Free (Gasless)</span>
               </div>
               <div className={styles.quoteRow}>
                 <span>Total fees:</span>
                 <span>${quote.fees.total}</span>
               </div>
+              <div className={styles.gaslessNote}>
+                ⚡ Powered by Yellow Network + Nitrolite ERC-7824
+              </div>
             </div>
             <div className={styles.quoteRow}>
               <span>Delivery time:</span>
-              <span>{quote.estimatedDelivery}</span>
+              <span>Instant (Off-chain)</span>
             </div>
           </div>
           

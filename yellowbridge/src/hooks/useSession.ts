@@ -46,7 +46,7 @@ export function useSession(address: Address | null, sessionKey: SessionKey | nul
     setIsLoading(true)
     setError(null)
     try {
-      const result = await sessionManager.transfer(request)
+      const result = await sessionManager.transfer(request, address)
       if (!result.success) {
         throw new Error(result.error || 'Transfer failed')
       }

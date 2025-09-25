@@ -1,0 +1,415 @@
+.kycContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.header {
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.backButton {
+  background: transparent;
+  color: #cccccc;
+  border: 1px solid #333333;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 20px;
+}
+
+.backButton:hover {
+  background: #222222;
+  border-color: #555555;
+}
+
+.header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.progressBar {
+  flex: 1;
+  height: 8px;
+  background: #333333;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #4ade80, #22c55e);
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  font-size: 14px;
+  color: #cccccc;
+  font-weight: 500;
+  min-width: 30px;
+}
+
+.content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.step {
+  background: #1a1a1a;
+  border: 2px solid #333333;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.step h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.stepDescription {
+  color: #cccccc;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroup label {
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.inputGroup input,
+.inputGroup select {
+  padding: 14px 16px;
+  border: 2px solid #333333;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #222222;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: #4ade80;
+  box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.1);
+}
+
+.phoneInput {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.phoneExample {
+  font-size: 12px;
+  color: #888888;
+  margin-top: 4px;
+}
+
+.otpInput {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 8px;
+}
+
+.pinInput {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 8px;
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, #4ade80, #22c55e);
+  color: #0a0a0a;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.primaryButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(74, 222, 128, 0.3);
+}
+
+.primaryButton:disabled {
+  background: #333333;
+  color: #888888;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.secondaryButton {
+  background: transparent;
+  color: #cccccc;
+  border: 2px solid #333333;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.secondaryButton:hover {
+  background: #222222;
+  border-color: #555555;
+}
+
+.uploadArea {
+  border: 2px dashed #333333;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 30px;
+  transition: all 0.2s;
+}
+
+.uploadArea:hover {
+  border-color: #4ade80;
+  background: rgba(74, 222, 128, 0.05);
+}
+
+.uploadIcon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.uploadArea h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.uploadArea p {
+  color: #cccccc;
+  margin-bottom: 20px;
+}
+
+.fileInput {
+  display: none;
+}
+
+.uploadButton {
+  background: #333333;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.uploadButton:hover {
+  background: #444444;
+}
+
+.uploadTips {
+  background: #222222;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.uploadTips h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.uploadTips ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #cccccc;
+}
+
+.uploadTips li {
+  margin-bottom: 5px;
+}
+
+.pinSecurity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #222222;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.securityIcon {
+  font-size: 1.2rem;
+}
+
+.pinSecurity p {
+  color: #cccccc;
+  margin: 0;
+  font-size: 14px;
+}
+
+.success {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.checkmark {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #4ade80, #22c55e);
+  color: #0a0a0a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0 auto 30px;
+  box-shadow: 0 8px 32px rgba(74, 222, 128, 0.3);
+}
+
+.success h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.success p {
+  color: #cccccc;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.verifiedBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #1a4d3a, #2d5a47);
+  border: 1px solid #4ade80;
+  color: #4ade80;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.verificationNote {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #1a2d1a;
+  border: 1px solid #4ade80;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.noteIcon {
+  font-size: 1.2rem;
+}
+
+.verificationNote p {
+  color: #4ade80;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nextSteps {
+  background: #222222;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.nextSteps h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.nextSteps ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #cccccc;
+}
+
+.nextSteps li {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .kycContainer {
+    padding: 10px;
+  }
+  
+  .step {
+    padding: 30px 20px;
+  }
+  
+  .step h3 {
+    font-size: 1.5rem;
+  }
+  
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+}

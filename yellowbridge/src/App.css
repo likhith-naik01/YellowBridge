@@ -1,14 +1,13 @@
 /* App Layout */
 .app {
   min-height: 100vh;
-  height: 100vh;
   width: 100vw;
   background: #0a0a0a;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .app-header {
@@ -412,20 +411,3 @@
   }
 }
 
-/* Full screen adjustments */
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-}
-
-#root {
-  height: 100vh;
-  width: 100vw;
-}

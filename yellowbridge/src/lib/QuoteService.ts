@@ -22,8 +22,8 @@ export interface QuoteResponse {
 
 class QuoteService {
   private readonly FIXED_RATE_USD_TO_INR = 83.5 // Demo rate
-  private readonly PLATFORM_FEE_PERCENT = 2.0
-  private readonly NETWORK_FEE_FIXED = 0.5
+  private readonly PLATFORM_FEE_PERCENT = 0.1 // Minimal fee for Yellow Network
+  private readonly NETWORK_FEE_FIXED = 0.0 // Gasless with Nitrolite ERC-7824
 
   async getQuote(request: QuoteRequest): Promise<QuoteResponse> {
     const fromAmount = parseFloat(request.fromAmount)
@@ -58,20 +58,8 @@ class QuoteService {
   }
 
   private getEstimatedDelivery(country?: string): string {
-    const deliveryTimes: Record<string, string> = {
-      'IN': 'Instant (off-chain)',
-      'US': '2-5 minutes',
-      'UK': '2-5 minutes',
-      'CA': '2-5 minutes',
-      'AU': '5-10 minutes',
-      'DE': '2-5 minutes',
-      'FR': '2-5 minutes',
-      'JP': '5-10 minutes',
-      'BR': '5-10 minutes',
-      'MX': '5-10 minutes'
-    }
-    
-    return deliveryTimes[country || 'IN'] || '2-5 minutes'
+    // All transfers are instant with Yellow Network + Nitrolite ERC-7824
+    return 'Instant (Off-chain)'
   }
 
   // For demo purposes, simulate real-time rate updates

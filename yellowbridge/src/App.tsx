@@ -4,6 +4,8 @@ import './App.css'
 import type { Address, WalletClient } from 'viem'
 import { connectWallet } from './wallet'
 import { webSocketService, type WsStatus } from './lib/websocket'
+import { LandingPage } from './components/LandingPage/LandingPage'
+import { KYC } from './components/KYC/KYC'
 // Authentication imports
 import {
   createAuthRequestMessage,
@@ -38,6 +40,7 @@ import { useSession } from './hooks/useSession'
 import { useTransfer } from './hooks/useTransfer'
 
 function App() {
+  const [currentPage, setCurrentPage] = useState<'landing' | 'app'>('landing')
   const [account, setAccount] = useState<Address | null>(null)
   const [walletClient, setWalletClient] = useState<WalletClient | null>(null)
   const [wsStatus, setWsStatus] = useState<WsStatus>('Disconnected')
@@ -230,6 +233,15 @@ function App() {
     }
   }, [isAuthenticated, sessionKey, account])
 
+  // Show landing page first
+  if (currentPage === 'landing') {
+    return (
+      <LandingPage 
+        onStartRegistration={() => setCurrentPage('app')}
+      />
+    )
+  }
+
   return (
     <div className="app">
       <header className="app-header">
@@ -310,7 +322,9 @@ function App() {
                         if (!isAuthenticated) return alert('Authenticating...')
                         if (!FAMILY_RECIPIENT) return alert('Missing VITE_FAMILY_RECIPIENT in .env.local')
                         setIsTransferring(true)
-                        setTransferStatus('Sending $500 to family...')
+                        setTransferStatus('Opening channel...')
+                        setTimeout(() => setTransferStatus('Executing off-chain transfer...'), 1000)
+                        setTimeout(() => setTransferStatus('Finalizing settlement...'), 2000)
                         const res = await transferFn(FAMILY_RECIPIENT as Address, '500')
                         if (!res.success) {
                           setIsTransferring(false)
